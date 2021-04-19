@@ -145,14 +145,15 @@ from discord.ext import commands
 from discord.utils import get
 from gtts import gTTS
 
-os.system("cls")
-os.system("mode 100,30")
-os.system("title Dauntless Selfbot")
+
 
 
 class SELFBOT():
     __version__ = 3.4
 
+os.system("cls")
+os.system("mode 100,30")
+os.system(f"title Dauntless Selfbot - Version {SELFBOT.__version__}")
 
 with open('config.json') as f:
     config = json.load(f)
@@ -237,28 +238,29 @@ def startprint():
         nitro = "Disabled"
 
     print(f'''{Fore.RESET}{Fore.MAGENTA}
-                                                    {Fore.WHITE}Status
-                                                  {Fore.MAGENTA}CONNECTED
-{Fore.WHITE}        [{Fore.MAGENTA}+{Fore.WHITE}] --------------------------- [{Fore.MAGENTA}+{Fore.WHITE}]                      [{Fore.MAGENTA}+{Fore.WHITE}] --------------------------- [{Fore.MAGENTA}+{Fore.WHITE}]               
+
+{Fore.WHITE}--------------------------- [{Fore.MAGENTA}+{Fore.WHITE}]                      [{Fore.MAGENTA}+{Fore.WHITE}] --------------------------- [{Fore.MAGENTA}+{Fore.WHITE}]               
 
 
 {Fore.MAGENTA}
-              ▓█████▄  ▄▄▄       █    ██  ███▄    █ ▄▄▄█████▓ ██▓    ▓█████   ██████   ██████ 
-              ▒██▀ ██▌▒████▄     ██  ▓██▒ ██ ▀█   █ ▓  ██▒ ▓▒▓██▒    ▓█   ▀ ▒██    ▒ ▒██    ▒ 
-              ░██   █▌▒██  ▀█▄  ▓██  ▒██░▓██  ▀█ ██▒▒ ▓██░ ▒░▒██░    ▒███   ░ ▓██▄   ░ ▓██▄   
-              ░▓█▄   ▌░██▄▄▄▄██ ▓▓█  ░██░▓██▒  ▐▌██▒░ ▓██▓ ░ ▒██░    ▒▓█  ▄   ▒   ██▒  ▒   ██▒
-              ░▒████▓  ▓█   ▓██▒▒▒█████▓ ▒██░   ▓██░  ▒██▒ ░ ░██████▒░▒████▒▒██████▒▒▒██████▒▒
-              ▒▒▓  ▒  ▒▒   ▓▒█░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒   ▒ ░░   ░ ▒░▓  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░▒ ▒▓▒ ▒ ░
-              ░ ▒  ▒   ▒   ▒▒ ░░░▒░ ░ ░ ░ ░░   ░ ▒░    ░    ░ ░ ▒  ░ ░ ░  ░░ ░▒  ░ ░░ ░▒  ░ ░
-              ░ ░  ░   ░   ▒    ░░░ ░ ░    ░   ░ ░   ░        ░ ░      ░   ░  ░  ░  ░  ░  ░  
-              ░          ░  ░   ░              ░              ░  ░   ░  ░      ░        ░  
-               ░                                                                              
+        ▓█████▄  ▄▄▄       █    ██  ███▄    █ ▄▄▄█████▓ ██▓    ▓█████   ██████   ██████ 
+        ▒██▀ ██▌▒████▄     ██  ▓██▒ ██ ▀█   █ ▓  ██▒ ▓▒▓██▒    ▓█   ▀ ▒██    ▒ ▒██    ▒ 
+        ░██   █▌▒██  ▀█▄  ▓██  ▒██░▓██  ▀█ ██▒▒ ▓██░ ▒░▒██░    ▒███   ░ ▓██▄   ░ ▓██▄   
+        ░▓█▄   ▌░██▄▄▄▄██ ▓▓█  ░██░▓██▒  ▐▌██▒░ ▓██▓ ░ ▒██░    ▒▓█  ▄   ▒   ██▒  ▒   ██▒
+        ░▒████▓  ▓█   ▓██▒▒▒█████▓ ▒██░   ▓██░  ▒██▒ ░ ░██████▒░▒████▒▒██████▒▒▒██████▒▒
+        ▒▒▓  ▒  ▒▒   ▓▒█░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒   ▒ ░░   ░ ▒░▓  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░▒ ▒▓▒ ▒ ░
+        ░ ▒  ▒   ▒   ▒▒ ░░░▒░ ░ ░ ░ ░░   ░ ▒░    ░    ░ ░ ▒  ░ ░ ░  ░░ ░▒  ░ ░░ ░▒  ░ ░
+        ░ ░  ░   ░   ▒    ░░░ ░ ░    ░   ░ ░   ░        ░ ░      ░   ░  ░  ░  ░  ░  ░  
+        ░          ░  ░   ░              ░              ░  ░   ░  ░      ░        ░  
+         ░                                                                              
 
-{Fore.WHITE}        [{Fore.MAGENTA}+{Fore.WHITE}] ------------------------------------------------------------------------------------ [{Fore.MAGENTA}+{Fore.WHITE}]
+{Fore.WHITE}------------------------------------------------------------------------------------ [{Fore.MAGENTA}+{Fore.WHITE}]
+{Fore.WHITE}----------------------------------------------------------------------- [{Fore.MAGENTA}-{Fore.WHITE}]
                                                 
-                                                {Fore.WHITE}User:{Fore.MAGENTA}{Daunt.user.name}#{Daunt.user.discriminator}{Fore.WHITE} / {Fore.MAGENTA}{len(Daunt.guilds)}{Fore.WHITE} guilds  /
-                                                {Fore.WHITE}Prefix: {Fore.MAGENTA}{Daunt.command_prefix}
-                                                
+[{Fore.MAGENTA}-{Fore.WHITE}] User:{Fore.MAGENTA}{Daunt.user.name}#{Daunt.user.discriminator}{Fore.WHITE}
+ [{Fore.MAGENTA}-{Fore.WHITE}] Server #: {Fore.MAGENTA}{len(Daunt.guilds)}{Fore.WHITE}
+  [{Fore.MAGENTA}-{Fore.WHITE}] Prefix: {Fore.MAGENTA}{Daunt.command_prefix}{Fore.WHITE}
+   [{Fore.MAGENTA}-{Fore.WHITE}] Status: {Fore.GREEN}Connected    {Fore.WHITE}                                    
 
 
                                 {Fore.WHITE}Type {Fore.MAGENTA}{Daunt.command_prefix}help {Fore.WHITE}in any channel to get started.
@@ -687,41 +689,6 @@ async def bots(ctx):
     bottiez = f"**Bots ({len(bots)}):**\n{', '.join(bots)}"
     await ctx.send(bottiez)
 
-@Daunt.command()
-async def home(ctx):
-        await ctx.message.delete()
-        embed=discord.Embed(color=0x2f3136)
-        embed.set_footer(text="[]0% ")
-        message = await ctx.send(embed=embed)
-        await message.edit(embed=embed)
-        await asyncio.sleep(0.1)
-        embed=discord.Embed(color=0x2f3136)
-        embed.set_footer(text="██]15% ")
-        await message.edit(embed=embed)
-        await asyncio.sleep(0.1)
-        embed=discord.Embed(color=0x2f3136)
-        embed.set_footer(text="█████]45% ")
-        await message.edit(embed=embed)
-        await asyncio.sleep(0.1)
-        embed=discord.Embed(color=0x2f3136)
-        embed.set_footer(text="█████████]73%")
-        await message.edit(embed=embed)
-        await asyncio.sleep(0.2)
-        embed=discord.Embed(color=0x2f3136)
-        embed.set_footer(text="████████████]99%")
-        await message.edit(embed=embed)
-        await asyncio.sleep(1)
-        embed=discord.Embed()
-        embed.set_thumbnail(url="https://i.vgy.me/os0G9n.gif")
-        embed.add_field(name="Thank's for using Daunt", value=f"If you have any questions, check out my socials. [**{Daunt.command_prefix}socials**] ", inline=False)
-        embed.add_field(name="Test", value=f"────────────── ❝ 𝖉𝖆𝖚𝖓𝖙 ❞ ──────────────", inline=False)
-        embed.add_field(name="Categories", value=f"`Main`, `Account`, `Text`, `Misc`, \n `NSFW` & `Nuke` ", inline=True)
-        embed.add_field(name="Categories", value=f"`Main`, `Account`, `Text`, `Misc`, \n `NSFW` & `Nuke` ", inline=True)
-        embed.add_field(name="Categories", value=f"`Main`, `Account`, `Text`, `Misc`, \n `NSFW` & `Nuke` ", inline=True)
-        embed.add_field(name="More Info", value=f"type **{Daunt.command_prefix}help [category]** for more information", inline=False)
-        embed.add_field(name="Credits", value="blank", inline=False)
-        embed.set_footer(text="daunt")
-        await message.edit(embed=embed)
 
 
 @Daunt.command()
@@ -729,14 +696,13 @@ async def help(ctx, category=None):
     await ctx.message.delete()
     if category is None:
         embed=discord.Embed(color=0x2f3136)
-        embed.set_thumbnail(url="https://i.vgy.me/os0G9n.gif")
-        embed.add_field(name="Thank's for using Daunt", value=f"If you have any questions, check out my socials. [**{Daunt.command_prefix}socials**] ", inline=False)
-        embed.add_field(name="Test", value=f"────────────── ❝ 𝖉𝖆𝖚𝖓𝖙 ❞ ──────────────", inline=False)
-        embed.add_field(name="Categories", value=f"`Main`, `Account`, `Text`, `Misc`, \n `NSFW` & `Nuke` ", inline=True)
-        embed.add_field(name="Categories", value=f"`Main`, `Account`, `Text`, `Misc`, \n `NSFW` & `Nuke` ", inline=True)
-        embed.add_field(name="Categories", value=f"`Main`, `Account`, `Text`, `Misc`, \n `NSFW` & `Nuke` ", inline=True)
-        embed.add_field(name="More Info", value=f"type **{Daunt.command_prefix}help [category]** for more information", inline=False)
-        embed.add_field(name="Credits", value="blank", inline=False)
+        embed.set_thumbnail(url="https://i.vgy.me/QBVvWT.gif")
+        embed.add_field(name="Thanks for using Daunt", value=f"sex ", inline=False)
+        embed.add_field(name="────────────── ❝ 𝖉𝖆𝖚𝖓𝖙 ❞ ──────────────", value=f"​", inline=False)
+        embed.add_field(name="Links", value=f"https://github.com/dauntIess/dauntless", inline=True)
+        embed.add_field(name="Categories", value=f"`?2`, `?2`, `?2`, `?2`, \n `?2` & `?2` ", inline=True)
+        embed.add_field(name="Help", value=f"type **{Daunt.command_prefix}help [category]** for more information", inline=True)
+        embed.add_field(name="test", value=f"test", inline=False)
         embed.set_footer(text="daunt")
         await ctx.send(embed=embed)
     elif str(category).lower() == "general":
@@ -2864,14 +2830,6 @@ async def purge(ctx, amount: int = None):
                 
                 pass
 
-@Daunt.command()
-async def socials(ctx):
-    await ctx.message.delete()
-    embed = discord.Embed(color=0x2f3136)
-    embed.add_field(name="Twitter", value="@deemosrevenge", inline=True)
-    embed.add_field(name="Discord", value="dauntless#0001", inline=True)
-    embed.add_field(name="Telegram", value="daunt", inline=True)
-    await ctx.send(embed=embed)
 
 
 
@@ -2919,12 +2877,6 @@ async def stopactivity(ctx):
     await ctx.message.delete()
     await Daunt.change_presence(activity=None, status=discord.Status.dnd)
 
-
-
-@Daunt.command(name='rolecolor')
-async def _role_hexcode(ctx, *, role: discord.Role):
-    await ctx.message.delete()
-    await ctx.send(f"{role.name} : {role.color}")
 
 
 @Daunt.command(name='clean')
